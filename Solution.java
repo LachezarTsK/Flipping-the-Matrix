@@ -47,13 +47,13 @@ public class Solution {
 	 * 
 	 * @return Maximum sum of the elements in the upper left quarter of the matrix.
 	 */
-	public static int maxSum_matrixUpperLeftQuarter(int[][] matrix, int half) {
+	public static int maxSum_matrixUpperLeftQuarter(int[][] matrix, int half_squareSide) {
 		int maxSum = 0;
-		int maxIndex = 2 * half - 1;
+		int maxIndex = 2 * half_squareSide - 1;
 		int maxElement = 0;
 
-		for (int row = 0; row < half; row++) {
-			for (int column = 0; column < half; column++) {
+		for (int row = 0; row < half_squareSide; row++) {
+			for (int column = 0; column < half_squareSide; column++) {
 
 				maxElement = matrix[row][column];
 				maxElement = Math.max(maxElement, matrix[row][maxIndex - column]);
